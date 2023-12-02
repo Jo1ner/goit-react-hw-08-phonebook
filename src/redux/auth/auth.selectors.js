@@ -1,4 +1,4 @@
-export const selectContacts = state => state.contacts.contacts.items;
-export const selectIsLoading = state => state.contacts.contacts.isLoading;
-export const selectError = state => state.contacts.contacts.error;
-export const selectFilter = state => state.contacts.filter;
+export const selectUserData = state => state.auth.userData;
+export const selectAuthenticated = state => state.auth.authenticated;
+export const selectAuthIsLoading = state => state.auth.isLoading;
+export const selectAuthError = state => state.auth.error;

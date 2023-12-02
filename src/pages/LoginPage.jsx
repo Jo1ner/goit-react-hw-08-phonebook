@@ -38,7 +38,7 @@ const LoginPage = () => {
             placeholder="********"
             required
             name="userPassword"
-            minLength={8}
+            minLength={6}
           />
         </label>
         <br />

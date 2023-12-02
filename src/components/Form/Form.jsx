@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { nanoid } from 'nanoid';
 import { useState } from 'react';
 import { addContact } from 'redux/contacts/contacts.reducer';
 import { FormStyle } from './Form.styled';
@@ -17,25 +16,24 @@ export const Form = () => {
     }
     const newContact = {
       ...formData,
-      id: nanoid(),
     };
     console.log(newContact);
     dispatch(addContact(newContact));
   };
 
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
+  const [number, setNumber] = useState('');
 
   const handleSubmit = evt => {
     evt.preventDefault();
 
     const formData = {
       name: name,
-      phone: phone,
+      number: number,
     };
     createContact(formData);
     setName('');
-    setPhone('');
+    setNumber('');
   };
 
   const handleInputChange = evt => {
@@ -44,7 +42,7 @@ export const Form = () => {
     if (name === 'name') {
       setName(value);
     } else if (name === 'number') {
-      setPhone(value);
+      setNumber(value);
     }
   };
 
@@ -64,9 +62,9 @@ export const Form = () => {
         <label>
           <p>Phone</p>
           <input
-            type="tel"
+            type="text"
             name="number"
-            value={phone}
+            value={number}
             onChange={handleInputChange}
             pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}"
             placeholder="XXX-XX-XX"
