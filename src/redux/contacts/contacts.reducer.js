@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
 import { instance } from 'redux/auth/auth.reducer';
 
 export const fetchContacts = createAsyncThunk(

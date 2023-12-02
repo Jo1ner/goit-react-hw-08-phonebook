@@ -7,7 +7,6 @@ import { selectContacts } from 'redux/contacts/contacts.selectors';
 export const Form = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
-  console.log('contactsInForm: ', contacts);
 
   const createContact = formData => {
     if (contacts.some(contact => contact.name === formData.name)) {
