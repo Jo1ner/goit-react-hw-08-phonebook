@@ -4,6 +4,7 @@ import { ContactItem, ButtonDelete } from './ContactListItem.styled';
 
 export const ContactListItem = ({ contact }) => {
   const dispatch = useDispatch();
+
   const handleDeleteContact = contactId => {
     dispatch(deleteContact(contactId));
   };
@@ -11,7 +12,7 @@ export const ContactListItem = ({ contact }) => {
   return (
     <ContactItem>
       <span>{contact.name}: </span>
-      <span>{contact.phone}</span>
+      <span>{contact.number}</span>
       <ButtonDelete
         type="button"
         onClick={() => handleDeleteContact(contact.id)}

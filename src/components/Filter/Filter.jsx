@@ -7,7 +7,6 @@ export const Filter = () => {
 
   const handleInputFilterChange = evt => {
     const filterValue = evt.target.value;
-    console.log('filterValue: ', filterValue);
     dispatch(addContactsFilter(filterValue));
   };
   return (
