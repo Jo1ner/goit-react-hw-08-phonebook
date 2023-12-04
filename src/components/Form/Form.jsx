@@ -30,14 +30,15 @@ export const Form = () => {
   return (
     <div>
       <FormStyle onSubmit={createContact}>
+        <h2 className="title">Add new contact</h2>
         <label>
-          <h2>Add new contact</h2>
-          <p>Name</p>
-          <input type="text" name="contactName" required />
+          <p className="text">Name</p>
+          <input className="input" type="text" name="contactName" required />
         </label>
         <label>
-          <p>Phone</p>
+          <p className="text">Phone</p>
           <input
+            className="input"
             type="text"
             name="contactNumber"
             pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}"
