@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contacts/contacts.reducer';
 import { FormStyle } from './Form.styled';
 import { selectContacts } from 'redux/contacts/contacts.selectors';
+import Notiflix from 'notiflix';
 
 export const Form = () => {
   const dispatch = useDispatch();
@@ -19,12 +20,13 @@ export const Form = () => {
     };
 
     if (contacts.some(contact => contact.name === formData.name)) {
-      alert(`${formData.name} is already in contacts`);
+      Notiflix.Notify.failure(`${formData.name} is already in contacts`);
       return;
     }
     dispatch(addContact(formData))
       .unwrap()
       .then(() => evt.target.reset());
+    Notiflix.Notify.success(`You add new contact`);
   };
 
   return (

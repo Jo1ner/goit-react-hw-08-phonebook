@@ -1,3 +1,4 @@
+import { FormStyle } from 'components/Form/Form.styled';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { registerThunk } from 'redux/auth/auth.reducer';
@@ -15,10 +16,11 @@ const RegisterPage = () => {
   };
   return (
     <div>
-      <form onSubmit={onSubmit}>
+      <FormStyle onSubmit={onSubmit}>
         <label>
-          <p>Name:</p>
+          <p className="text">Name:</p>
           <input
+            className="input"
             type="text"
             placeholder="Petrov Petro Petrovich"
             required
@@ -26,8 +28,9 @@ const RegisterPage = () => {
           />
         </label>
         <label>
-          <p>Email:</p>
+          <p className="text">Email:</p>
           <input
+            className="input"
             type="email"
             placeholder="testmail@tmail.com"
             required
@@ -35,8 +38,9 @@ const RegisterPage = () => {
           />
         </label>
         <label>
-          <p>Password:</p>
+          <p className="text">Password:</p>
           <input
+            className="input"
             type="password"
             placeholder="********"
             required
@@ -45,7 +49,7 @@ const RegisterPage = () => {
         </label>
         <br />
         <button type="submit">Sign Up</button>
-      </form>
+      </FormStyle>
     </div>
   );
 };

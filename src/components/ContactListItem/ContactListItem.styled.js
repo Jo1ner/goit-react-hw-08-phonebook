@@ -2,18 +2,33 @@ import styled from 'styled-components';
 
 export const ContactItem = styled.li`
   display: flex;
-  gap: 20px;
-  justify-content: flex-start;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
 
   span {
-    width: 150px;
+    font-size: 26px;
+    font-weight: 400;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
   }
 `;
 
 export const ButtonDelete = styled.button`
   cursor: pointer;
-  background-color: #e6e6fa;
-  border-radius: 3px;
+  color: #6d7e86;
+  background-color: #dddddd;
+  border: 2px solid #679173;
+  border-radius: 10px;
+  transition: all 0.3s;
+  font-size: 20px;
+  padding: 10px;
   &:hover {
     background-color: #bebecf;
   }

@@ -5,7 +5,7 @@ export const StyledHeader = styled.header`
   margin-left: auto;
   margin-right: auto;
   max-width: 1400px;
-  padding: 30px 20px 30px 20px;
+  padding: 20px;
 `;
 
 export const StyledNav = styled.nav`
@@ -48,6 +48,5 @@ export const ContainerStyled = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
 `;

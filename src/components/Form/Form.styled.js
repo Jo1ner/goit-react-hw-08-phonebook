@@ -7,6 +7,9 @@ export const FormStyle = styled.form`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  label {
+    width: 100%;
+  }
   .title {
     font-size: 32px;
     font-weight: 500;
@@ -16,6 +19,7 @@ export const FormStyle = styled.form`
     text-align: start;
   }
   .input {
+    width: 100%;
     font-size: 30px;
   }
   button {

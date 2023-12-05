@@ -1,3 +1,5 @@
+import { FormStyle } from 'components/Form/Form.styled';
+import Notiflix from 'notiflix';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { loginThunk } from 'redux/auth/auth.reducer';
@@ -18,13 +20,15 @@ const LoginPage = () => {
     console.log('formDataLogin: ', formData);
 
     dispatch(loginThunk(formData));
+    Notiflix.Notify.success(`Authentication was successful`);
   };
   return (
     <div>
-      <form onSubmit={onSubmit}>
+      <FormStyle onSubmit={onSubmit}>
         <label>
-          <p>Email:</p>
+          <p className="text">Email:</p>
           <input
+            className="input"
             type="email"
             placeholder="testmail@tmail.com"
             required
@@ -32,8 +36,9 @@ const LoginPage = () => {
           />
         </label>
         <label>
-          <p>Password:</p>
+          <p className="text">Password:</p>
           <input
+            className="input"
             type="password"
             placeholder="********"
             required
@@ -43,7 +48,7 @@ const LoginPage = () => {
         </label>
         <br />
         <button type="submit">Sign In</button>
-      </form>
+      </FormStyle>
     </div>
   );
 };
